@@ -1,36 +1,26 @@
 :root {
-  --bg: #f9f9f9;
-  --text: #333;
-  --accent: #0077b6;
-  --card-bg: #fff;
-  --header-bg: #222;
-  --header-text: #fff;
-}
-
-body.dark {
-  --bg: #121212;
-  --text: #eee;
-  --accent: #90e0ef;
-  --card-bg: #1e1e1e;
-  --header-bg: #000;
-  --header-text: #fff;
+  --bg: #f5f5f7;
+  --text: #1d1d1f;
+  --accent: #0071e3;
+  --card-bg: #ffffff;
+  --header-bg: #f5f5f7;
+  --header-text: #1d1d1f;
+  --skill-bg: #eaeaea;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.3s, color 0.3s;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   min-height: 60vh;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #222, #444);
+  background: url('assets/images/banner.jpg') center/cover no-repeat;
   color: var(--header-text);
   padding: 2rem;
 }
@@ -39,17 +29,6 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: fadeInLeft 1s forwards;
-}
-
-.hero-right {
-  flex: 2;
-  padding: 2rem;
-  opacity: 0;
-  transform: translateX(50px);
-  animation: fadeInRight 1s forwards;
 }
 
 .profile-photo {
@@ -57,6 +36,11 @@ body {
   height: 180px;
   border-radius: 50%;
   border: 4px solid #fff;
+}
+
+.hero-right {
+  flex: 2;
+  padding: 2rem;
 }
 
 .hero h1 {
@@ -73,27 +57,7 @@ body {
   margin-right: 15px;
   font-size: 1.8rem;
   color: var(--header-text);
-  transition: transform 0.3s;
-}
-
-.social a:hover {
-  transform: scale(1.2);
-}
-
-#theme-toggle {
-  margin-top: 1rem;
-  padding: 6px 12px;
-  background: none;
-  border: 2px solid var(--header-text);
-  border-radius: 6px;
-  color: var(--header-text);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#theme-toggle:hover {
-  background: var(--header-text);
-  color: var(--header-bg);
+  text-decoration: none;
 }
 
 /* Sections */
@@ -101,10 +65,6 @@ section {
   padding: 3rem 2rem;
   max-width: 900px;
   margin: auto;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.2s;
 }
 
 h2 {
@@ -113,23 +73,17 @@ h2 {
   padding-bottom: .5rem;
 }
 
-/* Cards */
 .card {
-  background: linear-gradient(145deg, var(--card-bg), #f0f0f0);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-body.dark .card {
-  background: linear-gradient(145deg, var(--card-bg), #2a2a2a);
+/* Experience */
+.card h3 {
+  margin-top: 0;
 }
 
 /* Education */
@@ -137,67 +91,92 @@ body.dark .card {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
 }
-
 .edu-entry img {
   width: 60px;
   margin-right: 15px;
 }
 
-/* Clients Logos */
+/* Clients */
 .logos {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
 }
-
 .logos img {
   width: 120px;
+  height: 60px;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: 0.3s;
 }
-
 .logos img:hover {
   filter: none;
   transform: scale(1.05);
 }
 
-/* Lists */
-ul {
+/* Skills Section */
+#skills {
+  background: var(--skill-bg);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#skills ul li {
+  background: var(--card-bg);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+#skills ul li:hover {
+  transform: translateX(5px);
+  color: var(--accent);
+}
+
+/* Certifications */
+#certifications ul {
   list-style: none;
   padding: 0;
 }
 
-ul li {
+#certifications ul li {
+  display: flex;
+  align-items: center;
   margin-bottom: .5rem;
-  position: relative;
-  padding-left: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
+#certifications ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+#certifications ul li:hover {
+  transform: translateY(-3px);
   color: var(--accent);
 }
 
-/* Form */
+/* Contact Form */
 form {
   margin-top: 1rem;
 }
-
 .form-group {
   position: relative;
   margin-bottom: 1.5rem;
 }
-
 form input, form textarea {
   width: 100%;
   padding: 12px;
@@ -206,13 +185,7 @@ form input, form textarea {
   background: var(--bg);
   color: var(--text);
   outline: none;
-  transition: border-color 0.3s;
 }
-
-form input:focus, form textarea:focus {
-  border-color: var(--accent);
-}
-
 form label {
   position: absolute;
   top: 12px;
@@ -222,7 +195,6 @@ form label {
   pointer-events: none;
   transition: all 0.2s;
 }
-
 form input:focus + label,
 form input:valid + label,
 form textarea:focus + label,
@@ -234,22 +206,13 @@ form textarea:valid + label {
   background: var(--bg);
   padding: 0 4px;
 }
-
-/* Buttons */
 form button {
-  background-image: linear-gradient(135deg, #0077b6, #90e0ef);
+  background: var(--accent);
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-form button:hover {
-  background-position: right center;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -258,31 +221,4 @@ footer {
   padding: 1rem;
   background: var(--header-bg);
   color: var(--header-text);
-}
-
-/* Animations */
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Global smooth hover transition */
-* {
-  transition: all 0.3s ease;
 }
