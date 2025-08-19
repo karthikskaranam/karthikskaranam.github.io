@@ -127,7 +127,7 @@
   <!-- Contact -->
   <section id="contact" aria-label="Contact Me">
     <h2>Contact Me</h2>
-    <form id="contactForm">
+    <form id="contactForm" method="POST" action="php/contact.php">
       <div class="form-group">
         <input type="text" id="name" name="name" required>
         <label>Your Name</label>
@@ -142,7 +142,11 @@
       </div>
       <button type="submit">Send</button>
     </form>
+    <div id="formStatus"></div>
   </section>
+
+  <script src="js/contact.js"></script>
+
 
   <footer>
     <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
@@ -159,20 +163,6 @@
     }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    // Name validation (letters and spaces only)
-    const nameRegex = /^[a-zA-Z\s]{2,}$/;
-    if (!nameRegex.test(name)) {
-      alert('Please enter a valid name with at least 2 letters.');
-      return;
-    }
   </script>
 
 </body>
