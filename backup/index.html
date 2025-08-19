@@ -127,26 +127,22 @@
   <!-- Contact -->
   <section id="contact" aria-label="Contact Me">
     <h2>Contact Me</h2>
-    <form id="contactForm" method="POST" action="php/contact.php">
+    <form action="mailto:karthikkaranam@live.com" method="post" enctype="text/plain">
       <div class="form-group">
-        <input type="text" id="name" name="name" required>
+        <input type="text" name="name" required>
         <label>Your Name</label>
       </div>
       <div class="form-group">
-        <input type="email" id="email" name="email" required>
+        <input type="email" name="email" required>
         <label>Your Email</label>
       </div>
       <div class="form-group">
-        <textarea id="message" name="message" maxlength="500" required></textarea>
-        <label>Your Message (max 500 characters)</label>
+        <textarea name="message" required></textarea>
+        <label>Your Message</label>
       </div>
       <button type="submit">Send</button>
     </form>
-    <div id="formStatus"></div>
   </section>
-
-<script src="js/contact.js"></script>
-
 
   <footer>
     <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
