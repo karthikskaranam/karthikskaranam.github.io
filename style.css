@@ -389,6 +389,7 @@ footer {
   display: inline-block;
   margin: 0 auto;
   padding: 12px 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   background: #0077ff;
   color: #fff;
