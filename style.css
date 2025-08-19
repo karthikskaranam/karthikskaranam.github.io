@@ -361,46 +361,33 @@ footer {
   }
 }
 
-/* Form Group Container */
-.form-group {
-  position: relative;
-  margin-bottom: 20px;
-  width: 100%;
+/* Center the form content */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers all child elements */
+  gap: 1rem;             /* space between fields and button */
 }
 
-/* Input and Textarea styling */
-.form-group input,
-.form-group textarea {
+/* Inputs, textarea full width but centered */
+#contact .form-group {
   width: 100%;
-  padding: 12px 14px;
+  max-width: 500px;   /* form doesn’t stretch too wide */
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  outline: none;
-  transition: all 0.2s ease;
-  resize: none; /* prevent dragging bigger */
-  background: #fff;
 }
 
-/* Focus Effect */
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #0077ff;
-  box-shadow: 0 0 6px rgba(0, 119, 255, 0.2);
-}
-
-/* Placeholder text */
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #999;
-  font-size: 0.95rem;
-}
-
-/* Submit button */
-button[type="submit"] {
-  display: block;          /* makes it take full line */
-  margin: 0 auto;          /* centers horizontally */
+/* Centered submit button */
+#contact button[type="submit"] {
+  display: inline-block;
+  margin: 0 auto;
   padding: 12px 24px;
   font-size: 1rem;
   background: #0077ff;
@@ -411,13 +398,14 @@ button[type="submit"] {
   transition: background 0.3s ease;
 }
 
-button[type="submit"]:hover {
+#contact button[type="submit"]:hover {
   background: #005fcc;
 }
 
-/* Status message after form submission */
+/* Center form status text */
 #formStatus {
-  margin-top: 10px;
+  margin-top: 1rem;
+  text-align: center;
   font-size: 0.95rem;
-  color: #333;
+  color: #0077ff;
 }
