@@ -1,61 +1,71 @@
 :root {
   --bg: #f9f9f9;
   --text: #333;
+  --accent: #0077b6;
+  --card-bg: #fff;
   --header-bg: #222;
   --header-text: #fff;
 }
 body.dark {
   --bg: #121212;
   --text: #eee;
+  --accent: #90e0ef;
+  --card-bg: #1e1e1e;
   --header-bg: #000;
   --header-text: #fff;
 }
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  line-height: 1.6;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: background 0.3s, color 0.3s;
 }
-header.banner {
-  background: url('assets/images/banner.jpg') no-repeat center center/cover;
+.hero {
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #222, #444);
   color: var(--header-text);
-  text-align: center;
-  padding: 4rem 2rem 2rem;
-  position: relative;
-}
-header .overlay {
-  background: rgba(0,0,0,0.5);
   padding: 2rem;
-  border-radius: 10px;
-  display: inline-block;
+}
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   border: 4px solid #fff;
-  margin-bottom: 1rem;
 }
-header nav {
-  background: var(--header-bg);
-  padding: 0.5rem;
+.hero-right {
+  flex: 2;
+  padding: 2rem;
 }
-header nav a {
+.hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.hero p {
+  margin: .5rem 0 1rem;
+  font-size: 1.2rem;
+}
+.social a {
+  margin-right: 15px;
+  font-size: 1.8rem;
   color: var(--header-text);
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
 }
 #theme-toggle {
+  margin-top: 1rem;
+  padding: 6px 12px;
   background: none;
   border: 2px solid var(--header-text);
-  border-radius: 5px;
+  border-radius: 6px;
   color: var(--header-text);
-  padding: 5px 10px;
   cursor: pointer;
-  margin-top: 1rem;
 }
 section {
   padding: 3rem 2rem;
@@ -63,14 +73,34 @@ section {
   margin: auto;
 }
 h2 {
-  color: var(--text);
+  margin-bottom: 1rem;
   border-bottom: 2px solid #ddd;
   padding-bottom: .5rem;
-  margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.edu-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.edu-entry img {
+  width: 60px;
+  margin-right: 15px;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 .logos img {
   width: 120px;
-  margin: 15px;
   filter: grayscale(100%);
   transition: 0.3s;
 }
@@ -78,26 +108,55 @@ h2 {
   filter: none;
   transform: scale(1.05);
 }
-.social a {
-  margin: 0 10px;
-  font-size: 1.5rem;
-  color: var(--text);
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: .5rem;
+}
+form {
+  margin-top: 1rem;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 form input, form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   background: var(--bg);
   color: var(--text);
+  outline: none;
+}
+form label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: .9rem;
+  color: #777;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+form input:focus + label,
+form input:valid + label,
+form textarea:focus + label,
+form textarea:valid + label {
+  top: -8px;
+  left: 8px;
+  font-size: .75rem;
+  color: var(--accent);
+  background: var(--bg);
+  padding: 0 4px;
 }
 form button {
-  background: var(--header-bg);
-  color: var(--header-text);
+  background: var(--accent);
+  color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 }
 footer {

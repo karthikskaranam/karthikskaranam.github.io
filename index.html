@@ -8,56 +8,71 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="banner">
-    <div class="overlay">
+  <!-- Hero Banner -->
+  <header class="hero">
+    <div class="hero-left">
       <img src="assets/images/profile.jpg" alt="Karthik Karanam" class="profile-photo">
+    </div>
+    <div class="hero-right">
       <h1>Karthik Karanam</h1>
-      <p>Senior Data Analyst | BI Analyst | Azure & Power BI Specialist</p>
+      <p>Senior Data Analyst | Business Intelligence Analyst</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/karthikskaranam" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
       <button id="theme-toggle">🌙 Dark</button>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#clients">Clients</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
 
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
     <p>Results-driven Senior Data Analyst with 16 years in IT, specialising in BI, analytics, and cloud data solutions across Telecom, Banking, and Digital industries. Skilled in Power BI, Azure, SQL, and Python with proven ability to deliver actionable business insights.</p>
   </section>
 
+  <!-- Experience -->
   <section id="experience">
     <h2>Experience</h2>
-    <ul>
-      <li><strong>Senior Data Analyst | Procal Technologies Inc (2023–2025)</strong><br>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</li>
-      <li><strong>Data Analyst | Rijyos Technovations Ltd (2020–2023)</strong><br>Delivered analytics for The Economist, improving customer retention strategies.</li>
-      <li><strong>Technical Lead | HyperDAP (2019)</strong></li>
-      <li><strong>Technology Analyst | Wells Fargo (2014–2017)</strong></li>
-      <li><strong>Software Engineer | Tech Mahindra (2006–2010)</strong></li>
-    </ul>
+    <div class="card">
+      <h3>Senior Data Analyst – Procal Technologies (2023–2025)</h3>
+      <p>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</p>
+    </div>
+    <div class="card">
+      <h3>Data Analyst – Rijyos Technovations (2020–2023)</h3>
+      <p>Delivered analytics for The Economist, improving customer retention strategies.</p>
+    </div>
+    <div class="card">
+      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </div>
   </section>
 
+  <!-- Education -->
   <section id="education">
     <h2>Education</h2>
-    <p><strong>MSc Information Technology</strong> – University of Aberdeen, United Kingdom (2019–2020)</p>
-    <p><strong>B.Tech in Electronics & Communications</strong> – JNTU Hyderabad, India (2002–2006)</p>
+    <div class="edu-entry">
+      <img src="assets/images/abdn.svg" alt="University of Aberdeen Logo">
+      <p><strong>MSc Information Technology</strong>, University of Aberdeen, UK (2019–2020)</p>
+    </div>
+    <div class="edu-entry">
+      <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo">
+      <p><strong>B.Tech Electronics & Communications</strong>, JNTU Hyderabad, India (2002–2006)</p>
+    </div>
   </section>
 
+  <!-- Clients -->
   <section id="clients">
     <h2>Clients & Companies</h2>
     <div class="logos">
-      <img src="assets/images/tmobile.png" alt="T-Mobile">
-      <img src="assets/images/economist.png" alt="The Economist">
-      <img src="assets/images/wellsfargo.png" alt="Wells Fargo">
-      <img src="assets/images/techmahindra.png" alt="Tech Mahindra">
+      <img src="assets/images/tmobile.svg" alt="T-Mobile">
+      <img src="assets/images/economist.svg" alt="The Economist">
+      <img src="assets/images/wellsfargo.svg" alt="Wells Fargo">
+      <img src="assets/images/techmahindra.svg" alt="Tech Mahindra">
       <img src="assets/images/procal.png" alt="Procal Technologies">
     </div>
   </section>
 
+  <!-- Certifications -->
   <section id="certifications">
     <h2>Certifications</h2>
     <ul>
@@ -68,20 +83,22 @@
     </ul>
   </section>
 
-  <section id="links">
-    <h2>Find Me</h2>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/karthikskaranam" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
-
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
     <form action="mailto:karthikkaranam@live.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <div class="form-group">
+        <input type="text" name="name" required>
+        <label>Your Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" required>
+        <label>Your Email</label>
+      </div>
+      <div class="form-group">
+        <textarea name="message" required></textarea>
+        <label>Your Message</label>
+      </div>
       <button type="submit">Send</button>
     </form>
   </section>
@@ -93,13 +110,11 @@
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
-
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark');
       toggleBtn.textContent = body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
       localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
     });
-
     if(localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark');
       toggleBtn.textContent = '☀️ Light';
