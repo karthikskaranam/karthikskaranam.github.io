@@ -375,14 +375,21 @@ footer {
   max-width: 500px;   /* form doesn’t stretch too wide */
 }
 
-#contact input,
-#contact textarea {
+/* Duplicate input/textarea styles for #contact removed for clarity and to avoid conflicts.
+  See unified styles below for form-group input and textarea. */
+
+.form-group input,
+.form-group textarea {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   border: 1px solid #ccc;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  transition: all 0.2s ease;
+  resize: none; /* prevent dragging bigger */
+  background: #fff;
 }
 
 /* Centered submit button */
