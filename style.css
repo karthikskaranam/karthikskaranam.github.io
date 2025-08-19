@@ -360,3 +360,63 @@ footer {
     justify-content: center;
   }
 }
+
+/* Form Group Container */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Input and Textarea styling */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+  resize: none; /* prevent dragging bigger */
+  background: #fff;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 6px rgba(0, 119, 255, 0.2);
+}
+
+/* Placeholder text */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* Submit button */
+button[type="submit"] {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #005fcc;
+}
+
+/* Status message after form submission */
+#formStatus {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
