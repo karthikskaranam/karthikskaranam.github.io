@@ -380,6 +380,7 @@ footer {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 6px;
   font-size: 1rem;
 }
