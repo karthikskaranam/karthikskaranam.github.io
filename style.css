@@ -376,7 +376,7 @@ footer {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: inherit;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   outline: none;
   transition: all 0.2s ease;
   resize: none; /* prevent dragging bigger */
