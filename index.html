@@ -3,83 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Karthik Karanam - Portfolio</title>
+  <meta name="description" content="Karthik Karanam - Senior Data Analyst portfolio showcasing skills in Power BI, Azure, SQL, and Python.">
+  <meta name="keywords" content="Karthik Karanam, Data Analyst, Business Intelligence, Power BI, SQL, Python, Azure">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Hero Section with Banner -->
-  <section class="hero">
+  <!-- Hero Banner -->
+  <header class="hero" aria-label="Hero Banner">
     <div class="hero-left">
-      <img src="banner.jpg" alt="Banner Image" class="profile-photo">
+      <img src="assets/images/photo.jpg" alt="Profile photo of Karthik Karanam" class="profile-photo" loading="lazy">
     </div>
     <div class="hero-right">
-      <h1>Karthik</h1>
-      <p>Data Engineer | BI Analyst | Telecom & Digital Domain</p>
+      <h1>Karthik Karanam</h1>
+      <p>Senior Data Analyst | Business Intelligence Analyst</p>
       <div class="social">
-        <a href="https://linkedin.com/in/username" target="_blank">
-          <img src="linkedin.svg" alt="LinkedIn" style="width: 24px; vertical-align: middle;">
+        <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/username" target="_blank">
-          <img src="github.svg" alt="GitHub" style="width: 24px; vertical-align: middle;">
+        <a href="https://github.com/karthikskaranam" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
         </a>
       </div>
     </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" aria-label="About Me">
+    <h2>About Me</h2>
+    <p>Results-driven Senior Data Analyst and Business Intelligence Analyst with 16 years of IT experience, including 8 years in data, analytics and BI across Telecom, Banking, and Digital industries. Certified Fabric Analytics Engineer and Power BI Data Analyst with proven expertise in data modelling, KPI reporting, and advanced analytics. Skilled in delivering end-to-end data solutions using Azure Data Factory, Synapse Analytics, Databricks, Snowflake, and Power BI, integrating large-scale structured and unstructured datasets for actionable business insights. Proficient in Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL (T-SQL, PostgreSQL, MS SQL Server) for data transformation, automation, and validation. Adept at ETL development, data governance, and performance optimization, driving improvements in decision-making, customer retention, and operational efficiency. Collaborative leader with a track record of translating business requirements into scalable, high-impact analytics solutions.</p>
   </section>
 
-  <!-- Experience / Projects Section -->
-  <section>
+  <!-- Experience -->
+  <section id="experience" aria-label="Experience">
     <h2>Experience</h2>
-    <div class="card">
-      <h3>Data Engineer</h3>
-      <p>Worked on Telecom & Digital data pipelines and Power BI dashboards.</p>
-    </div>
+    <article class="card">
+      <h3>Senior Data Analyst – Procal Technologies (2023–2025)</h3>
+      <p>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</p>
+    </article>
+    <article class="card">
+      <h3>Data Analyst – Rijyos Technovations (2020–2023)</h3>
+      <p>Delivered analytics for The Economist, improving customer retention strategies.</p>
+    </article>
+    <article class="card">
+      <h3>Technical Lead – HyperDAP (2019)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
+    <article class="card">
+      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
+    <article class="card">
+      <h3>Software Consultant – Multiple Clients (2010–2014)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
+    <article class="card">
+      <h3>Software Engineer – Tech Mahindra (2006–2010)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
   </section>
 
-  <!-- Clients Logos Section -->
-  <section>
+  <!-- Education -->
+  <section id="education" aria-label="Education">
+    <h2>Education</h2>
+    <article class="edu-entry">
+      <img src="assets/images/abdn.jpeg" alt="University of Aberdeen Logo" loading="lazy">
+      <p><strong>MSc Information Technology</strong>, University of Aberdeen, United Kingdom (2019–2020)</p>
+    </article>
+    <article class="edu-entry">
+      <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo" loading="lazy">
+      <p><strong>B.Tech Electronics & Communications</strong>, JNTU Hyderabad, India (2002–2006)</p>
+    </article>
+  </section>
+
+  <!-- Clients -->
+  <section id="clients" aria-label="Clients and Companies">
     <h2>Clients</h2>
-    <div class="logos">
-      <img src="client1.png" alt="Client 1">
-      <img src="client2.png" alt="Client 2">
-      <img src="client3.png" alt="Client 3">
-      <img src="client4.png" alt="Client 4">
-    </div>
+    <ul class="logos">
+      <li><img src="assets/images/tmob.png" alt="T-Mobile Logo" loading="lazy"></li>
+      <li><img src="assets/images/econ.png" alt="The Economist Logo" loading="lazy"></li>
+      <li><img src="assets/images/wf.png" alt="Wells Fargo Logo" loading="lazy"></li>
+      <li><img src="assets/images/linde.png" alt="The Linde Group Logo" loading="lazy"></li>
+      <li><img src="assets/images/colr.png" alt="Colruyt Group Logo" loading="lazy"></li>
+    </ul>
   </section>
 
-  <!-- Skills Section -->
-  <section>
+  <!-- Skills -->
+  <section id="skills" aria-label="Skills">
     <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Power BI & Data Visualization</li>
-        <li>SQL & Database Management</li>
-        <li>Azure Data Factory & Data Lake</li>
-        <li>Python for Data Analysis</li>
-        <li>Telecom Data Analytics</li>
-      </ul>
+    <div class="skills-category">
+      <h3>Data Analytics & BI</h3>
+      <p>Data Analysis, Data Modelling, Business Intelligence (BI), KPI Reporting, Business Analysis, Predictive Analytics, Customer Churn Analysis, Revenue Forecasting</p>
+    </div>
+    <div class="skills-category">
+      <h3>BI & Visualization Tools</h3>
+      <p>Power BI, Microsoft Excel (Advanced), DAX, Adobe Analytics</p>
+    </div>
+    <div class="skills-category">
+      <h3>Programming & Scripting</h3>
+      <p>Python (Pandas, NumPy, Matplotlib, Seaborn), SQL (T-SQL, PostgreSQL, Microsoft SQL Server), Ruby on Rails, JavaScript</p>
+    </div>
+    <div class="skills-category">
+      <h3>Cloud & Big Data Platforms</h3>
+      <p>Azure (Data Factory, Synapse Analytics, Data Lake Storage, SQL Database), Google Cloud Platform (GCP), Databricks, Snowflake</p>
+    </div>
+    <div class="skills-category">
+      <h3>ETL & Data Engineering</h3>
+      <p>ETL Development, Data Pipelines, Data Warehousing, Microsoft SSIS, SSAS, DBT, Data Quality Management, Data Governance</p>
+    </div>
+    <div class="skills-category">
+      <h3>Databases</h3>
+      <p>SQL Server, PostgreSQL, Snowflake</p>
+    </div>
+    <div class="skills-category">
+      <h3>Methodologies & Tools</h3>
+      <p>Agile, Scrum, CI/CD, Git, Jira, Notion, Draw.io, Figma</p>
     </div>
   </section>
 
-  <!-- Certifications Section -->
-  <section>
+  <!-- Certifications -->
+  <section id="certifications" aria-label="Certifications">
     <h2>Certifications</h2>
-    <div class="card">
-      <p>
-        <img src="microsoft.png" alt="Microsoft" style="width: 24px; vertical-align: middle; margin-right: 8px;">
-        Microsoft Certified: Data Engineer Associate
-      </p>
-      <p>
-        <img src="microsoft.png" alt="Microsoft" style="width: 24px; vertical-align: middle; margin-right: 8px;">
-        Microsoft Certified: Azure Fundamentals
-      </p>
-    </div>
+    <ul class="certs">
+      <li><img src="assets/images/microsoft.svg" alt="Microsoft Logo"> Microsoft Certified: Fabric Analytics Engineer Associate</li>
+      <li><img src="assets/images/microsoft.svg" alt="Microsoft Logo"> Microsoft Certified: Power BI Data Analyst Associate</li>
+      <li><img src="assets/images/microsoft.svg" alt="Microsoft Logo"> Microsoft Certified: Azure Fundamentals</li>
+      <li><img src="assets/images/microsoft.svg" alt="Microsoft Logo"> Microsoft Certified: Azure Data Fundamentals</li>
+    </ul>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Karthik. All rights reserved.
-  </footer>
+  <!-- Contact -->
+  <section id="contact" aria-label="Contact Me">
+    <h2>Contact Me</h2>
+    <form action="mailto:karthikkaranam@live.com" method="post" enctype="text/plain">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="John Doe" required>
+        <label>Your Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <label>Your Email</label>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your message..." required></textarea>
+        <label>Your Message</label>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
+  </footer>
 </body>
 </html>
