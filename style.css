@@ -399,7 +399,8 @@ footer {
 
 /* Submit button */
 button[type="submit"] {
-  display: inline-block;
+  display: block;          /* makes it take full line */
+  margin: 0 auto;          /* centers horizontally */
   padding: 12px 24px;
   font-size: 1rem;
   background: #0077ff;
