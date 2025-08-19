@@ -11,26 +11,21 @@
 </head>
 <body>
 
-  <!-- Hero Banner -->
   <!-- Hero Section -->
-<header class="hero">
-  <div class="hero-banner">
-    <img src="assets/images/banner.png" alt="Banner Image">
-  </div>
-  <div class="hero-profile">
-    <img src="assets/images/Photo.jpg" alt="Karthik Karanam Profile Photo">
-  </div>
-  <div class="hero-info">
-    <h1>Karthik Karanam</h1>
-    <p>Senior Data Analyst | Business Intelligence Analyst</p>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/karthikskaranam" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.xing.com/profile/Karthik_Karanam" target="_blank"><i class="fab fa-xing"></i></a>
+  <header class="hero">
+    <div class="hero-profile">
+      <img src="assets/images/Photo.jpg" alt="Karthik Karanam Profile Photo">
     </div>
-  </div>
-</header>
-
+    <div class="hero-info">
+      <h1>Karthik Karanam</h1>
+      <p>Senior Data Analyst | Business Intelligence Analyst</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/karthikskaranam" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.xing.com/profile/Karthik_Karanam" target="_blank"><i class="fab fa-xing"></i></a>
+      </div>
+    </div>
+  </header>
 
   <!-- About -->
   <section id="about" aria-label="About Me">
@@ -68,28 +63,25 @@
   </section>
 
   <!-- Education -->
-
   <section id="education">
-  <h2>Education</h2>
-  <div class="edu-cards">
-    <div class="edu-entry">
-      <img src="assets/images/abdn.jpeg" alt="School 1 Logo">
-      <div class="edu-details">
-        <h4>University of Aberdeen, United Kingdom</h4>
-        <p>MSc Information Technology, 2019 - 2020</p>
+    <h2>Education</h2>
+    <div class="edu-cards">
+      <div class="edu-entry">
+        <img src="assets/images/abdn.jpeg" alt="University of Aberdeen Logo">
+        <div class="edu-details">
+          <h4>University of Aberdeen, United Kingdom</h4>
+          <p>MSc Information Technology, 2019 - 2020</p>
+        </div>
+      </div>
+      <div class="edu-entry">
+        <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo">
+        <div class="edu-details">
+          <h4>JNTU Hyderabad, India</h4>
+          <p>B.Tech Electronics & Communications, 2006 - 2010</p>
+        </div>
       </div>
     </div>
-    <div class="edu-entry">
-      <img src="assets/images/jntuh.png" alt="School 2 Logo">
-      <div class="edu-details">
-        <h4>JNTU Hyderabad, India</h4>
-        <p>B.Tech Electronics & Communications, 2006 - 2010</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Clients -->
   <section id="clients" aria-label="Clients and Companies">
@@ -153,18 +145,19 @@
   <footer>
     <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
   </footer>
-<script>
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('fade-in');
-      }
-    });
-  }, { threshold: 0.2 });
 
-  sections.forEach(section => observer.observe(section));
-</script>
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
