@@ -6,6 +6,7 @@
   --header-bg: #222;
   --header-text: #fff;
 }
+
 body.dark {
   --bg: #121212;
   --text: #eee;
@@ -14,6 +15,7 @@ body.dark {
   --header-bg: #000;
   --header-text: #fff;
 }
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -21,6 +23,8 @@ body {
   color: var(--text);
   transition: background 0.3s, color 0.3s;
 }
+
+/* Hero Section */
 .hero {
   display: flex;
   min-height: 60vh;
@@ -30,34 +34,52 @@ body {
   color: var(--header-text);
   padding: 2rem;
 }
+
 .hero-left {
   flex: 1;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s forwards;
 }
+
+.hero-right {
+  flex: 2;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s forwards;
+}
+
 .profile-photo {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   border: 4px solid #fff;
 }
-.hero-right {
-  flex: 2;
-  padding: 2rem;
-}
+
 .hero h1 {
   margin: 0;
   font-size: 2.5rem;
 }
+
 .hero p {
   margin: .5rem 0 1rem;
   font-size: 1.2rem;
 }
+
 .social a {
   margin-right: 15px;
   font-size: 1.8rem;
   color: var(--header-text);
+  transition: transform 0.3s;
 }
+
+.social a:hover {
+  transform: scale(1.2);
+}
+
 #theme-toggle {
   margin-top: 1rem;
   padding: 6px 12px;
@@ -66,62 +88,116 @@ body {
   border-radius: 6px;
   color: var(--header-text);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+#theme-toggle:hover {
+  background: var(--header-text);
+  color: var(--header-bg);
+}
+
+/* Sections */
 section {
   padding: 3rem 2rem;
   max-width: 900px;
   margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.2s;
 }
+
 h2 {
   margin-bottom: 1rem;
   border-bottom: 2px solid #ddd;
   padding-bottom: .5rem;
 }
+
+/* Cards */
 .card {
-  background: var(--card-bg);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: linear-gradient(145deg, var(--card-bg), #f0f0f0);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+body.dark .card {
+  background: linear-gradient(145deg, var(--card-bg), #2a2a2a);
+}
+
+/* Education */
 .edu-entry {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
 }
+
 .edu-entry img {
   width: 60px;
   margin-right: 15px;
 }
+
+/* Clients Logos */
 .logos {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
 }
+
 .logos img {
   width: 120px;
   filter: grayscale(100%);
   transition: 0.3s;
 }
+
 .logos img:hover {
   filter: none;
   transform: scale(1.05);
 }
+
+/* Lists */
 ul {
   list-style: none;
   padding: 0;
 }
+
 ul li {
   margin-bottom: .5rem;
+  position: relative;
+  padding-left: 1.2rem;
 }
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Form */
 form {
   margin-top: 1rem;
 }
+
 .form-group {
   position: relative;
   margin-bottom: 1.5rem;
 }
+
 form input, form textarea {
   width: 100%;
   padding: 12px;
@@ -130,7 +206,13 @@ form input, form textarea {
   background: var(--bg);
   color: var(--text);
   outline: none;
+  transition: border-color 0.3s;
 }
+
+form input:focus, form textarea:focus {
+  border-color: var(--accent);
+}
+
 form label {
   position: absolute;
   top: 12px;
@@ -140,6 +222,7 @@ form label {
   pointer-events: none;
   transition: all 0.2s;
 }
+
 form input:focus + label,
 form input:valid + label,
 form textarea:focus + label,
@@ -151,17 +234,55 @@ form textarea:valid + label {
   background: var(--bg);
   padding: 0 4px;
 }
+
+/* Buttons */
 form button {
-  background: var(--accent);
+  background-image: linear-gradient(135deg, #0077b6, #90e0ef);
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
+
+form button:hover {
+  background-position: right center;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: var(--header-bg);
   color: var(--header-text);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global smooth hover transition */
+* {
+  transition: all 0.3s ease;
 }

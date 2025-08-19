@@ -4,76 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karthik Karanam - Portfolio</title>
+  <meta name="description" content="Karthik Karanam - Senior Data Analyst portfolio showcasing skills in Power BI, Azure, SQL, and Python.">
+  <meta name="keywords" content="Karthik Karanam, Data Analyst, Business Intelligence, Power BI, SQL, Python, Azure">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script>
+    // Apply saved theme before page renders
+    if(localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
 <body>
   <!-- Hero Banner -->
-  <header class="hero">
+  <header class="hero" aria-label="Hero Banner">
     <div class="hero-left">
-      <img src="assets/images/profile.jpg" alt="Karthik Karanam" class="profile-photo">
+      <img src="assets/images/profile.jpg" alt="Profile photo of Karthik Karanam" class="profile-photo" loading="lazy">
     </div>
     <div class="hero-right">
       <h1>Karthik Karanam</h1>
       <p>Senior Data Analyst | Business Intelligence Analyst</p>
       <div class="social">
-        <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/karthikskaranam" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/karthikskaranam" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
       <button id="theme-toggle">🌙 Dark</button>
     </div>
   </header>
 
   <!-- About -->
-  <section id="about">
+  <section id="about" aria-label="About Me">
     <h2>About Me</h2>
     <p>Results-driven Senior Data Analyst with 16 years in IT, specialising in BI, analytics, and cloud data solutions across Telecom, Banking, and Digital industries. Skilled in Power BI, Azure, SQL, and Python with proven ability to deliver actionable business insights.</p>
   </section>
 
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience" aria-label="Experience">
     <h2>Experience</h2>
-    <div class="card">
+    <article class="card">
       <h3>Senior Data Analyst – Procal Technologies (2023–2025)</h3>
       <p>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</p>
-    </div>
-    <div class="card">
+    </article>
+    <article class="card">
       <h3>Data Analyst – Rijyos Technovations (2020–2023)</h3>
       <p>Delivered analytics for The Economist, improving customer retention strategies.</p>
-    </div>
-    <div class="card">
+    </article>
+    <article class="card">
       <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
       <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
-    </div>
+    </article>
+     <article class="card">
+      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
+     <article class="card">
+      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
+     <article class="card">
+      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
+      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    </article>
   </section>
 
   <!-- Education -->
-  <section id="education">
+  <section id="education" aria-label="Education">
     <h2>Education</h2>
-    <div class="edu-entry">
-      <img src="assets/images/abdn.svg" alt="University of Aberdeen Logo">
+    <article class="edu-entry">
+      <img src="assets/images/abdn.svg" alt="University of Aberdeen Logo" loading="lazy">
       <p><strong>MSc Information Technology</strong>, University of Aberdeen, UK (2019–2020)</p>
-    </div>
-    <div class="edu-entry">
-      <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo">
+    </article>
+    <article class="edu-entry">
+      <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo" loading="lazy">
       <p><strong>B.Tech Electronics & Communications</strong>, JNTU Hyderabad, India (2002–2006)</p>
-    </div>
+    </article>
   </section>
 
   <!-- Clients -->
-  <section id="clients">
+  <section id="clients" aria-label="Clients and Companies">
     <h2>Clients & Companies</h2>
-    <div class="logos">
-      <img src="assets/images/tmobile.svg" alt="T-Mobile">
-      <img src="assets/images/economist.svg" alt="The Economist">
-      <img src="assets/images/wellsfargo.svg" alt="Wells Fargo">
-      <img src="assets/images/techmahindra.svg" alt="Tech Mahindra">
-      <img src="assets/images/procal.png" alt="Procal Technologies">
-    </div>
+    <ul class="logos">
+      <li><img src="assets/images/tmobile.svg" alt="T-Mobile Logo" loading="lazy"></li>
+      <li><img src="assets/images/economist.svg" alt="The Economist Logo" loading="lazy"></li>
+      <li><img src="assets/images/wellsfargo.svg" alt="Wells Fargo Logo" loading="lazy"></li>
+      <li><img src="assets/images/techmahindra.svg" alt="Tech Mahindra Logo" loading="lazy"></li>
+      <li><img src="assets/images/procal.png" alt="Procal Technologies Logo" loading="lazy"></li>
+    </ul>
   </section>
 
   <!-- Certifications -->
-  <section id="certifications">
+  <section id="certifications" aria-label="Certifications">
     <h2>Certifications</h2>
     <ul>
       <li>Microsoft Certified: Fabric Analytics Engineer Associate</li>
@@ -84,19 +108,19 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" aria-label="Contact Me">
     <h2>Contact Me</h2>
     <form action="mailto:karthikkaranam@live.com" method="post" enctype="text/plain">
       <div class="form-group">
-        <input type="text" name="name" required>
+        <input type="text" name="name" placeholder="John Doe" required>
         <label>Your Name</label>
       </div>
       <div class="form-group">
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="you@example.com" required>
         <label>Your Email</label>
       </div>
       <div class="form-group">
-        <textarea name="message" required></textarea>
+        <textarea name="message" placeholder="Your message..." required></textarea>
         <label>Your Message</label>
       </div>
       <button type="submit">Send</button>
@@ -115,10 +139,6 @@
       toggleBtn.textContent = body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
       localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
     });
-    if(localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark');
-      toggleBtn.textContent = '☀️ Light';
-    }
   </script>
 </body>
 </html>
