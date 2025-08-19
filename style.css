@@ -1,300 +1,304 @@
-Here’s the full **HTML** and **CSS** with all your requested updates: banner image, same-size client logos, skills section, Microsoft logos for certifications, removed theme toggle, and LinkedIn logo fixed.
-
----
-
-### `index.html`
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthik Karanam - Portfolio</title>
-  <meta name="description" content="Karthik Karanam - Senior Data Analyst portfolio showcasing skills in Power BI, Azure, SQL, and Python.">
-  <meta name="keywords" content="Karthik Karanam, Data Analyst, Business Intelligence, Power BI, SQL, Python, Azure">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Hero Banner -->
-  <header class="hero" aria-label="Hero Banner">
-    <div class="hero-left">
-      <img src="assets/images/photo.jpg" alt="Profile photo of Karthik Karanam" class="profile-photo" loading="lazy">
-    </div>
-    <div class="hero-right">
-      <h1>Karthik Karanam</h1>
-      <p>Senior Data Analyst | Business Intelligence Analyst</p>
-      <div class="social">
-        <a href="https://www.linkedin.com/in/karthikskaranam/" target="_blank" aria-label="LinkedIn Profile">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/karthikskaranam" target="_blank" aria-label="GitHub Profile">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section id="about" aria-label="About Me">
-    <h2>About Me</h2>
-    <p>Results-driven Senior Data Analyst and Business Intelligence Analyst with 16 years of IT experience, including 8 years in data, analytics and BI across Telecom, Banking, and Digital industries. Certified Fabric Analytics Engineer and Power BI Data Analyst with proven expertise in data modelling, KPI reporting, and advanced analytics. Skilled in delivering end-to-end data solutions using Azure Data Factory, Synapse Analytics, Databricks, Snowflake, and Power BI, integrating large-scale structured and unstructured datasets for actionable business insights. Proficient in Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL (T-SQL, PostgreSQL, MS SQL Server) for data transformation, automation, and validation. Adept at ETL development, data governance, and performance optimization, driving improvements in decision-making, customer retention, and operational efficiency. Collaborative leader with a track record of translating business requirements into scalable, high-impact analytics solutions.</p>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" aria-label="Experience">
-    <h2>Experience</h2>
-    <article class="card">
-      <h3>Senior Data Analyst – Procal Technologies (2023–2025)</h3>
-      <p>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</p>
-    </article>
-    <article class="card">
-      <h3>Data Analyst – Rijyos Technovations (2020–2023)</h3>
-      <p>Delivered analytics for The Economist, improving customer retention strategies.</p>
-    </article>
-    <article class="card">
-      <h3>Technical Lead – HyperDAP (2019)</h3>
-      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
-    </article>
-    <article class="card">
-      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
-      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
-    </article>
-    <article class="card">
-      <h3>Software Consultant – Multiple Clients (2010–2014)</h3>
-      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
-    </article>
-    <article class="card">
-      <h3>Software Engineer – Tech Mahindra (2006–2010)</h3>
-      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
-    </article>
-  </section>
-
-  <!-- Education -->
-  <section id="education" aria-label="Education">
-    <h2>Education</h2>
-    <article class="edu-entry">
-      <img src="assets/images/abdn.jpeg" alt="University of Aberdeen Logo" loading="lazy">
-      <p><strong>MSc Information Technology</strong>, University of Aberdeen, United Kingdom (2019–2020)</p>
-    </article>
-    <article class="edu-entry">
-      <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo" loading="lazy">
-      <p><strong>B.Tech Electronics & Communications</strong>, JNTU Hyderabad, India (2002–2006)</p>
-    </article>
-  </section>
-
-  <!-- Clients -->
-  <section id="clients" aria-label="Clients and Companies">
-    <h2>Clients</h2>
-    <ul class="logos">
-      <li><img src="assets/images/tmob.png" alt="T-Mobile Logo" loading="lazy"></li>
-      <li><img src="assets/images/econ.png" alt="The Economist Logo" loading="lazy"></li>
-      <li><img src="assets/images/wf.png" alt="Wells Fargo Logo" loading="lazy"></li>
-      <li><img src="assets/images/linde.png" alt="The Linde Group Logo" loading="lazy"></li>
-      <li><img src="assets/images/colr.png" alt="Colruyt Group Logo" loading="lazy"></li>
-    </ul>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" aria-label="Skills">
-    <h2>Skills</h2>
-    <div class="skills-category">
-      <h3>Data Analytics & BI</h3>
-      <p>Data Analysis, Data Modelling, Business Intelligence (BI), KPI Reporting, Business Analysis, Predictive Analytics, Customer Churn Analysis, Revenue Forecasting</p>
-    </div>
-    <div class="skills-category">
-      <h3>BI & Visualization Tools</h3>
-      <p>Power BI, Microsoft Excel (Advanced), DAX, Adobe Analytics</p>
-    </div>
-    <div class="skills-category">
-      <h3>Programming & Scripting</h3>
-      <p>Python (Pandas, NumPy, Matplotlib, Seaborn), SQL (T-SQL, PostgreSQL, Microsoft SQL Server), Ruby on Rails, JavaScript</p>
-    </div>
-    <div class="skills-category">
-      <h3>Cloud & Big Data Platforms</h3>
-      <p>Azure (Data Factory, Synapse Analytics, Data Lake Storage, SQL Database), Google Cloud Platform (GCP), Databricks, Snowflake</p>
-    </div>
-    <div class="skills-category">
-      <h3>ETL & Data Engineering</h3>
-      <p>ETL Development, Data Pipelines, Data Warehousing, Microsoft SSIS, SSAS, DBT, Data Quality Management, Data Governance</p>
-    </div>
-    <div class="skills-category">
-      <h3>Databases</h3>
-      <p>SQL Server, PostgreSQL, Snowflake</p>
-    </div>
-    <div class="skills-category">
-      <h3>Methodologies & Tools</h3>
-      <p>Agile, Scrum, CI/CD, Git, Jira, Notion, Draw.io, Figma</p>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications" aria-label="Certifications">
-    <h2>Certifications</h2>
-    <ul class="certs">
-      <li><img src="assets/images/microsoft.png" alt="Microsoft Logo"> Microsoft Certified: Fabric Analytics Engineer Associate</li>
-      <li><img src="assets/images/microsoft.png" alt="Microsoft Logo"> Microsoft Certified: Power BI Data Analyst Associate</li>
-      <li><img src="assets/images/microsoft.png" alt="Microsoft Logo"> Microsoft Certified: Azure Fundamentals</li>
-      <li><img src="assets/images/microsoft.png" alt="Microsoft Logo"> Microsoft Certified: Azure Data Fundamentals</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" aria-label="Contact Me">
-    <h2>Contact Me</h2>
-    <form action="mailto:karthikkaranam@live.com" method="post" enctype="text/plain">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="John Doe" required>
-        <label>Your Name</label>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="you@example.com" required>
-        <label>Your Email</label>
-      </div>
-      <div class="form-group">
-        <textarea name="message" placeholder="Your message..." required></textarea>
-        <label>Your Message</label>
-      </div>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
-  </footer>
-</body>
-</html>
-```
-
----
-
-### `style.css`
-
-```css
-:root {
-  --primary-color: #0078d4;
-  --section-bg: #f8f9fa;
-  --text-color: #333;
-}
-
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
   margin: 0;
+  padding: 0;
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: #fff;
+  color: #333;
+  background: #f5f7fa;
 }
 
 h1, h2, h3 {
-  color: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
 }
 
-header.hero {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-banner img.banner-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 3rem 2rem;
-  background-image: url('assets/images/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
 }
 
-.hero-left img.profile-photo {
-  width: 150px;
-  height: 150px;
+.hero-left {
+  margin-right: 20px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  border: 3px solid #fff;
 }
 
-.hero-right {
-  margin-left: 2rem;
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+}
+
+.hero-right p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .social a {
-  margin-right: 1rem;
-  color: #fff;
+  margin-right: 15px;
   font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s;
 }
 
+.social a:hover {
+  color: #00aaff;
+}
+
+/* Sections */
 section {
-  padding: 3rem 2rem;
-  background-color: var(--section-bg);
-  margin-bottom: 1rem;
+  padding: 60px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+}
+
+/* Experience Cards */
 .card {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Education */
 .edu-entry {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 .edu-entry img {
-  width: 80px;
-  margin-right: 1rem;
+  width: 60px;
+  margin-right: 15px;
+  border-radius: 8px;
 }
 
+/* Clients Logos */
 .logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: center;
   list-style: none;
   padding: 0;
-  justify-content: center;
+}
+
+.logos li {
+  margin: 10px 20px;
 }
 
 .logos li img {
-  width: 120px;
-  height: 60px;
-  object-fit: contain;
+  width: 100px;
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.skills-category {
-  margin-bottom: 1.5rem;
+.logos li img:hover {
+  transform: scale(1.2) rotate(-5deg);
+  filter: brightness(1.2);
 }
 
-.skills-category h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-.skills-category p {
-  font-size: 1rem;
-  line-height: 1.5;
+.skill {
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: default;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.certs {
+.skill:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Skill Colors (match logos) */
+.skill.python { background: #306998; }
+.skill.sql { background: #00758F; }
+.skill.powerbi { background: #F2C811; color: #000; }
+.skill.fabric { background: #68217A; }
+.skill.azure { background: #0089D6; }
+.skill.databricks { background: #FF6F00; }
+.skill.etl { background: #FF5722; }
+.skill.snowflake { background: #00BFFF; }
+.skill.dbt { background: #E14C4C; }
+
+/* Certifications */
+.cert-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
-.certs li {
+.cert-list li {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  margin-bottom: 0.8rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.certs li img {
-  width: 24px;
-  height: 24px;
-  margin-right: 0.5rem;
+.cert-logo {
+  width: 30px;
+  margin-right: 10px;
 }
 
+/* Contact Form */
 form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .form-group {
   position: relative;
-```
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+label {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.85rem;
+  background: #fff;
+  padding: 0 5px;
+  color: #333;
+}
+
+button {
+  background: #00aaff;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0088cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #222;
+  color: #fff;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .hero-content {
+    flex-direction: column;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .hero-left {
+    margin-bottom: 15px;
+  }
+
+  .logos li img {
+    width: 80px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+}
