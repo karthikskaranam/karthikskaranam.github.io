@@ -11,8 +11,30 @@
 </head>
 <body>
 
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+      </ul>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header> 
+
   <!-- Hero Section -->
-  <header class="hero">
+  <section class="hero">
     <div class="hero-profile">
       <img src="assets/images/Photo.jpg" alt="Karthik Karanam Profile Photo">
     </div>
@@ -25,41 +47,89 @@
         <a href="https://www.xing.com/profile/Karthik_Karanam" target="_blank"><i class="fab fa-xing"></i></a>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- About -->
   <section id="about" aria-label="About Me">
     <h2>About Me</h2>
-    <p>Results-driven Senior Data Analyst and Business Intelligence Analyst with 16 years of IT experience, including 8 years in data, analytics, and BI across Telecom, Banking, and Digital industries. Certified Fabric Analytics Engineer and Power BI Data Analyst with proven expertise in data modelling, KPI reporting, and advanced analytics. Skilled in delivering end-to-end data solutions using Azure Data Factory, Synapse Analytics, Databricks, Snowflake, and Power BI, integrating large-scale structured and unstructured datasets for actionable business insights. Proficient in Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL (T-SQL, PostgreSQL, MS SQL Server) for data transformation, automation, and validation. Adept at ETL development, data governance, and performance optimization, driving improvements in decision-making, customer retention, and operational efficiency. Collaborative leader with a track record of translating business requirements into scalable, high-impact analytics solutions.</p>
+    <p>Results-driven Senior Data Analyst and Business Intelligence Analyst with 16 years of IT experience, including 8 years in data, analytics, and Business Intelligence across Telecom, Banking, and Digital industries. Certified Fabric Analytics Engineer and Power BI Data Analyst with proven expertise in data modelling, KPI reporting, and advanced analytics. Skilled in delivering end-to-end data solutions using Azure Data Factory, Synapse Analytics, Databricks, Snowflake, and Power BI, integrating large-scale structured and unstructured datasets for actionable business insights. Proficient in Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL (T-SQL, PostgreSQL, MS SQL Server) for data transformation, automation, and validation. Adept at ETL development, data governance, and performance optimization, driving improvements in decision-making, customer retention, and operational efficiency. Collaborative leader with a track record of translating business requirements into scalable, high-impact analytics solutions.</p>
   </section>
 
   <!-- Experience -->
   <section id="experience" aria-label="Experience">
-    <h2>Experience</h2>
-    <article class="card">
-      <h3>Senior Data Analyst – Procal Technologies (2023–2025)</h3>
-      <p>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</p>
-    </article>
-    <article class="card">
-      <h3>Data Analyst – Rijyos Technovations (2020–2023)</h3>
-      <p>Delivered analytics for The Economist, improving customer retention strategies.</p>
-    </article>
-    <article class="card">
-      <h3>Technical Lead – HyperDAP (2019)</h3>
-      <p>Led teams and built SQL-backed applications, boosting productivity and accelerating development by 20%.</p>
-    </article>
-    <article class="card">
-      <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
-      <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
-    </article>
-    <article class="card">
-      <h3>Software Consultant – Multiple Clients (2010-2014)</h3>
-      <p>Delivered end-to-end web and database solutions with top client satisfaction.</p>
-    </article>
-    <article class="card">
-      <h3>Software Engineer – Tech Mahindra (2006-2010)</h3>
-      <p>Developed and deployed scalable web applications.</p>
-    </article>
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Senior Data Analyst – Procal Technologies (2023–2025)</h3>
+    <p>Led BI solutions for T-Mobile telecom data, improving reporting accuracy and decision-making.</p>
+    <div class="tooltip">
+      <ul>
+        <li>Designed and implemented BI dashboards using Power BI for T-Mobile’s telecom data.</li>
+        <li>Improved reporting accuracy by 15% through advanced data modeling techniques.</li>
+        <li>Collaborated with cross-functional teams to align analytics with business goals.</li>
+        <li>Automated ETL processes using Azure Data Factory, reducing processing time by 20%.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Data Analyst – Rijyos Technovations (2020–2023)</h3>
+    <p>Delivered analytics for The Economist, improving customer retention strategies.</p>
+    <div class="tooltip">
+      <ul>
+        <li>Developed customer segmentation models to enhance retention strategies.</li>
+        <li>Created interactive visualizations in Power BI to support editorial decisions.</li>
+        <li>Optimized data pipelines using Snowflake for faster data retrieval.</li>
+        <li>Conducted A/B testing analysis to improve subscription conversion rates by 10%.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Technical Lead – HyperDAP (2019)</h3>
+    <p>Led teams and built SQL-backed applications, boosting productivity and accelerating development by 20%.</p>
+    <div class="tooltip">
+      <ul>
+        <li>Managed a team of 5 developers to deliver SQL-based applications.</li>
+        <li>Improved development speed by 20% through process automation.</li>
+        <li>Designed scalable database architectures using PostgreSQL.</li>
+        <li>Ensured code quality through rigorous testing and code reviews.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Technology Analyst – Wells Fargo (2014–2017)</h3>
+    <p>Optimized SQL Server databases and built ETL pipelines for banking applications.</p>
+    <div class="tooltip">
+      <ul>
+        <li>Optimized SQL Server queries, reducing execution time by 30%.</li>
+        <li>Developed ETL pipelines using SSIS for banking data integration.</li>
+        <li>Ensured data integrity through robust validation processes.</li>
+        <li>Supported risk analysis with predictive analytics models.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Software Consultant – Multiple Clients (2010-2014)</h3>
+    <p>Delivered end-to-end web and database solutions with top client satisfaction.</p>
+    <div class="tooltip">
+      <ul>
+        <li>Designed and deployed web applications using HTML, CSS, and JavaScript.</li>
+        <li>Built custom database solutions with MS SQL Server and MySQL.</li>
+        <li>Achieved 95% client satisfaction through tailored solutions.</li>
+        <li>Provided ongoing support and maintenance for deployed systems.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Software Engineer – Tech Mahindra (2006-2010)</h3>
+    <p>Developed and deployed scalable web applications.</p>
+    <div class="tooltip">
+      <ul>
+        <li>Developed web applications using Java and Spring framework.</li>
+        <li>Collaborated with clients to gather and implement requirements.</li>
+        <li>Improved application performance through code optimization.</li>
+        <li>Participated in agile development sprints and daily stand-ups.</li>
+      </ul>
+    </div>
+  </div>
   </section>
 
   <!-- Education -->
@@ -159,6 +229,16 @@
     }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
+
+
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.navbar ul');
+
+      toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    
   </script>
 
 </body>
