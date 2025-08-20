@@ -1,0 +1,98 @@
+/* Project Cards Grid (Scoped to #projects) */
+#projects .project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 1100px; /* Match section max-width from style.css */
+    margin: 0 auto; /* Center grid within section */
+}
+
+/* Individual Card */
+#projects .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Match style.css transition timing */
+    background: #fff; /* Match card background from style.css */
+}
+
+#projects .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    padding: 10px; /* Added padding around image */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Added shadow for image */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Include shadow in transition */
+}
+
+#projects .project-card:hover {
+    transform: translateY(-5px); /* Match style.css hover effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12); /* Match style.css hover shadow */
+}
+
+#projects .project-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+}
+
+/* Overlay */
+#projects .project-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.9); /* Use #2c3e50 from style.css navbar with opacity */
+    color: #fff;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease; /* Match style.css transition timing */
+}
+
+#projects .project-card:hover .project-details {
+    transform: translateY(0);
+}
+
+#projects .project-details h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: #fff; /* Ensure consistency with style.css text colors */
+}
+
+#projects .project-details p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #f0f0f0; /* Match hero-info p color from style.css */
+}
+
+#projects .project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #6a11cb; /* Match button color from style.css */
+    color: #fff;
+    border-radius: 8px; /* Match button border-radius from style.css */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; /* Match style.css transitions */
+}
+
+#projects .project-link:hover {
+    background: #2575fc; /* Match button hover color from style.css */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Match button hover shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #projects .project-card img {
+        height: 180px; /* Match existing projects.css responsive adjustment */
+        padding: 8px; /* Slightly reduced padding for smaller screens */
+    }
+
+    #projects .project-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min-width for mobile */
+    }
+}

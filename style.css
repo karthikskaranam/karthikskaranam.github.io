@@ -233,7 +233,7 @@ section.hero {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  width: 400px; /* Wider tooltip */
+  width: 500px; /* Wider tooltip */
   max-width: 90%; /* Prevent overflow on small screens */
   z-index: 20; /* Higher than card */
   opacity: 0;

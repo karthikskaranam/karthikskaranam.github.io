@@ -1,89 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthik Karanam - Projects</title>
-  <meta name="description" content="Portfolio projects of Karthik Karanam, showcasing Power BI, SQL, Python, and Azure solutions.">
-  <meta name="keywords" content="Karthik Karanam, Data Analyst, Projects, Power BI, SQL, Python, Azure">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="icon" href="assets/images/K.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Karthik Karanam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
     <nav>
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="index.html#about" class="nav-link">About</a></li>
-        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
-        <li><a href="index.html#education" class="nav-link">Education</a></li>
-        <li><a href="index.html#clients" class="nav-link">Clients</a></li>
-        <li><a href="index.html#skills" class="nav-link">Skills</a></li>
-        <li><a href="index.html#certifications" class="nav-link">Certifications</a></li>
-        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-      </ul>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h1>Projects</h1>
-    <div class="project-card">
-      <h2>Telecom Customer Retention Dashboard</h2>
-      <p>Power BI dashboard for T-Mobile analyzing churn and retention strategies using SQL and Azure Data Factory.</p>
-    </div>
-    <div class="project-card">
-      <h2>American Airlines Revenue Insights</h2>
-      <p>Power BI report analyzing airline revenue trends (2010–2019), focusing on underperforming carriers.</p>
-    </div>
-    <div class="project-card">
-      <h2>Azure Data Lake ETL Pipeline</h2>
-      <p>Automated ETL pipelines for telecom billing data using Azure Data Factory, SQL, and Python scripts.</p>
-    </div>
-    <!-- Add more project cards as needed -->
-  </section>
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="assets/images/img1.png" alt="Telecom Customer Retention Dashboard">
+                <div class="project-details">
+                    <h3>Airline Analysis</h3>
+                    <p>Exploratory Data Analysis of US American Airlines Financial Performance - A comprehensive analysis of financial trends from 2000 to 2019</p>
+                    <a href="https://github.com/karthikskaranam/analytics_projects/tree/main/airline_analytics" class="project-link">View Project</a>
+                </div>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
-  </footer>
+            <div class="project-card">
+                <img src="assets/images/img2.png" alt="Sales Analytics Platform">
+                <div class="project-details">
+                    <h3>Churn Analysis</h3>
+                    <p>Identifying Key Churn Drivers determine which factors contribute most significantly to customer churn within the banking and telecom industries</p>
+                    <a href="https://github.com/karthikskaranam/analytics_projects/tree/main/churn_analysis-main" class="project-link">View Project</a>
+                </div>
+            </div>
 
-  <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
+            <div class="project-card">
+                <img src="assets/images/img3.png" alt="ETL Pipeline Optimization">
+                <div class="project-details">
+                    <h3>Sales Analysis</h3>
+                    <p>Analysis to optimize sales strategies, enhance customer experience and insights from sales data, customer feedback, operational metrics, and market dynamics</p>
+                    <a href="https://github.com/karthikskaranam/analytics_projects/tree/main/sales-analysis-main" class="project-link">View Project</a>
+                </div>
+            </div>
 
-    // Scroll highlight for sections (if any)
-    if(sections.length > 0){
-      window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 70;
-          if(pageYOffset >= sectionTop){
-            current = section.getAttribute('id');
-          }
-        });
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if(link.getAttribute('href') === '#' + current){
-            link.classList.add('active');
-          }
-        });
-      });
-    }
+            <div class="project-card">
+                <img src="assets/images/img4.png" alt="Customer Segmentation Model">
+                <div class="project-details">
+                    <h3>Spotify Analysis</h3>
+                    <p>Analyzing Spotify Albums Data to understand user engagement with albums, artists, and tracks over time, providing valuable insights into listening patterns and trends</p>
+                    <a href="https://github.com/t17sk18/analytics_projects/tree/main/spotify_analytics" class="project-link">View Project</a>
+                </div>
+            </div>
 
-    // Highlight current page link
-    const currentPage = window.location.pathname.split("/").pop();
-    navLinks.forEach(link => {
-      const linkHref = link.getAttribute('href');
-      if(linkHref === currentPage){
-        link.classList.add('active');
-      }
-    });
-  </script>
+            <div class="project-card">
+                <img src="assets/images/img5.png" alt="Customer Segmentation Model">
+                <div class="project-details">
+                    <h3>Advance DWH Analysis</h3>
+                    <p>a comprehensive DW and analytics solution, from building a DW to generating insights, highlighting industry best practices in data engineering and analytics.</p>
+                    <a href="https://github.com/karthikskaranam/sql-data-analytics-project" class="project-link">View Project</a>
+                </div>
+            </div>
 
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/png" alt="Customer Segmentation Model">
+                <div class="project-details">
+                    <h3>In Progress</h3>
+                    <p>Advanced Python EDA</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
+    </footer>
 </body>
 </html>
