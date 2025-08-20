@@ -36,13 +36,17 @@ section h2 {
   color: #2c3e50;
 }
 
-/* Hero */
+/* Hero (Full Banner) */
 .hero {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   text-align: center;
   color: #fff;
@@ -157,16 +161,25 @@ section h2 {
 @keyframes floatLogo { 50% { transform: translateY(-5px); } }
 
 /* Skills */
+#skills {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 20px;
+}
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 12px; margin-top: 20px;
 }
 .skill {
-  text-align: center; padding: 12px;
-  border-radius: 10px; font-weight: bold;
-  color: #fff; font-size: 0.9rem;
+  text-align: center;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #fff !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--skill-color, #333);
 }
 .skill:hover {
   transform: translateY(-3px);
@@ -174,7 +187,7 @@ section h2 {
 }
 .python { background: #3776ab; }
 .sql { background: #e67e22; }
-.powerbi { background: #f2c811; color: #000; }
+.powerbi { background: #f2c811; color: #000 !important; }
 .fabric { background: #0078d4; }
 .azure { background: #0089d6; }
 .databricks { background: #ff3621; }
