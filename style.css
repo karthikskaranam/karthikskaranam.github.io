@@ -454,3 +454,16 @@ footer {
 .navbar ul li a.active {
   color: #000;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#formStatus {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  opacity: 0;
+}

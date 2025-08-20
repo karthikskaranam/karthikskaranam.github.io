@@ -1,41 +1,46 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+// Contact form handling
+const form = document.querySelector("form");
+const status = document.getElementById("formStatus");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const data = new FormData(form);
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const status = document.getElementById('formStatus');
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    // Reset status
-    status.textContent = '';
-    
-    // Name validation
-    if (!/^[a-zA-Z\s]{2,}$/.test(name)) {
-        status.textContent = 'Please enter a valid name (letters only, min 2 chars).';
-        return;
+      if (response.ok) {
+        showMessage("✅ Thanks! Your message has been sent.");
+        form.reset();
+      } else {
+        showMessage("❌ Oops, something went wrong. Please try again.");
+      }
+    } catch (err) {
+      showMessage("❌ Error sending message. Check your connection.");
     }
+  });
+}
 
-    // Email validation
-    if (!email.includes('@') || !email.includes('.')) {
-        status.textContent = 'Please enter a valid email.';
-        return;
-    }
+/**
+ * Show status message and auto fade-out after 4s
+ */
+function showMessage(msg) {
+  status.textContent = msg;
+  status.style.opacity = "1";
 
-    // Message length
-    if (message.length > 500) {
-        status.textContent = 'Message cannot exceed 500 characters.';
-        return;
-    }
+  setTimeout(() => {
+    status.style.transition = "opacity 1s ease";
+    status.style.opacity = "0";
+  }, 4000);
 
-    // Submit form using fetch (AJAX)
-    fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this)
-    })
-    .then(response => response.text())
-    .then(text => {
-        status.textContent = text;
-        this.reset();
-    })
-    .catch(err => status.textContent = 'Error sending message.');
-});
+  // Clear message after fade out
+  setTimeout(() => {
+    status.textContent = "";
+    status.style.transition = "";
+  }, 5000);
+}

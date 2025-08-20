@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karthik Karanam - Projects</title>
+  <meta name="description" content="Portfolio projects of Karthik Karanam, showcasing Power BI, SQL, Python, and Azure solutions.">
+  <meta name="keywords" content="Karthik Karanam, Data Analyst, Projects, Power BI, SQL, Python, Azure">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/K.png" type="image/png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="index.html#education" class="nav-link">Education</a></li>
+        <li><a href="index.html#clients" class="nav-link">Clients</a></li>
+        <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="index.html#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="project-card">
+      <h2>Telecom Customer Retention Dashboard</h2>
+      <p>Power BI dashboard for T-Mobile analyzing churn and retention strategies using SQL and Azure Data Factory.</p>
+    </div>
+    <div class="project-card">
+      <h2>American Airlines Revenue Insights</h2>
+      <p>Power BI report analyzing airline revenue trends (2010–2019), focusing on underperforming carriers.</p>
+    </div>
+    <div class="project-card">
+      <h2>Azure Data Lake ETL Pipeline</h2>
+      <p>Automated ETL pipelines for telecom billing data using Azure Data Factory, SQL, and Python scripts.</p>
+    </div>
+    <!-- Add more project cards as needed -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Karthik Karanam. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    // Scroll highlight for sections (if any)
+    if(sections.length > 0){
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 70;
+          if(pageYOffset >= sectionTop){
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if(link.getAttribute('href') === '#' + current){
+            link.classList.add('active');
+          }
+        });
+      });
+    }
+
+    // Highlight current page link
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
+      if(linkHref === currentPage){
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
