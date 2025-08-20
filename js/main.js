@@ -33,3 +33,15 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+const skillFills = document.querySelectorAll('.progress-fill');
+
+window.addEventListener('scroll', () => {
+  skillFills.forEach(fill => {
+    const rect = fill.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50) {
+      fill.style.width = fill.style.width; // This triggers the CSS width animation
+    }
+  });
+});
+
