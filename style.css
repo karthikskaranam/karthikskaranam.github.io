@@ -418,3 +418,39 @@ footer {
   font-size: 0.95rem;
   color: #0077ff;
 }
+
+
+
+/* Navbar styling */
+.navbar {
+  background-color: #1abc9c;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #000;
+}
