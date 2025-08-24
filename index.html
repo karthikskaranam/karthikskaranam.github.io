@@ -140,7 +140,7 @@
         </div>
       </div>
       <div class="edu-entry">
-        <img src="assets/images/jntuh.png" alt="JNTU Hyderabad Logo">
+        <img src="assets/images/jntuhlogo.png" alt="JNTU Hyderabad Logo">
         <div class="edu-details">
           <h4>JNTU Hyderabad, India</h4>
           <p>B.Tech Electronics & Communications</p>
@@ -223,18 +223,30 @@
       });
     }, { threshold: 0.2 });
 
-    sections.forEach(section => observer.observe(section));
-
-
-      const toggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.navbar ul');
-
-      toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
+    sections.forEach(section => observer.observe(section))
 
     
   </script>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.navbar nav ul');
+
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      navMenu.classList.toggle('show');
+    });
+
+    // Auto-close menu when clicking a link
+    document.querySelectorAll('.navbar nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        navMenu.classList.remove('show');
+      });
+    });
+  </script>
+
+
 
 </body>
 </html>
